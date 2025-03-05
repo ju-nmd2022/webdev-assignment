@@ -1,11 +1,19 @@
 const express = require("express");
-///application///
-const app = express();
-
-///port///
-const PORT = 3000;
-
 const sqlite3 = require('sqlite3').verbose();
+
+//-----
+// PORT
+//-----
+
+const port=3000
+
+
+//------------
+// APPLICATION
+//------------
+
+const app=express()
+
 
 // Connect to the SQLite database (creates 'database.db' if it doesn't exist)
 const db = new sqlite3.Database('./database.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
