@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #dfd9e1;
 }
 
 h1 {
@@ -11,21 +11,51 @@ h1 {
 }
 
 #stores-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 #stores-list li {
   background-color: #ffffff;
   border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 30px 30px;
   font-size: 18px;
+  text-align: center;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
 }
 
-p {
-  text-align: center;
-  color: #333;
+#stores-list li:hover {
+  background-color: #e0cce1;
+  transform: scale(1.02);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#stores-list li:hover {
+  color: transparent;
+}
+
+/* Show "Visit Website" on hover */
+#stores-list li::after {
+  content: "Visit Website";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#stores-list li:hover::after {
+  opacity: 1;
 }
