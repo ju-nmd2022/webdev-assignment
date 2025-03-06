@@ -12,19 +12,28 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 36px;
-  font-weight:bolder;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #69266a;
-  font-family: "Questrial", sans-serif;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+  font-size: 200px; 
+  font-weight: normal; 
+  margin: 0;
+  padding: 50px ; 
+  padding-top: 5px;
+  color: #914793;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap; 
+  overflow: hidden; 
+  max-width: 100%; 
+  cursor: pointer;
 }
+
+
+
 
 #stores-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  color: #b473b6;
   gap: 15px;
   padding: 20px;
   margin: 0 auto;
@@ -32,19 +41,19 @@ h1 {
 }
 
 #stores-list li {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: #000000;
+  border: 1px solid #000000;
   padding: 30px 30px;
   font-size: 18px;
   text-align: center;
   list-style: none;
-  border-radius: 8px;
+  border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   position: relative;
 }
 
 #stores-list li:hover {
-  background-color: #e0cce1;
+  background-color: #7d5280;
   transform: scale(1.02);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -61,7 +70,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 18px;
-  color: #2e2e2e;
+  color: #1d1d1d;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
