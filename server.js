@@ -1,8 +1,20 @@
+//---------
+// PACKAGES
+//---------
+
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
+//------------
+// APPLICATION
+//------------
+
 const app = express();
+
+//------------
+// MIDDLEWARES
+//------------
 
 app.use(express.static("public"));
 
@@ -25,6 +37,9 @@ app.get("/api/stores", (req, res) => {
   });
 });
 
+//-----
+// PORT
+//-----
 
 const port = 3000;
 app.listen(port, () => {
