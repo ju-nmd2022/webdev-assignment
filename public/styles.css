@@ -7,7 +7,15 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  font-size: 36px; /* Larger and more professional */
+  font-weight: bold;
+  margin-top: 40px; /* Adds space above */
+  margin-bottom: 20px;
+  color: #333; /* Dark gray for a modern look */
+  font-family: "Poppins", sans-serif; /* Optional: More professional font */
+  letter-spacing: 1px; /* Adds a subtle spacing effect */
+  text-transform: capitalize; /* Makes it more refined */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 #stores-list {
@@ -42,7 +50,6 @@ h1 {
   color: transparent;
 }
 
-/* Show "Visit Website" on hover */
 #stores-list li::after {
   content: "Visit Website";
   position: absolute;
