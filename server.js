@@ -34,6 +34,11 @@ app.get("/api/stores", (req, res) => {
       console.error("Error parsing JSON:", parseErr);
       res.status(500).send("Error parsing data");
     }
+
+    /*const stores = JSON.parse(data); 
+      res.json(stores); 
+    */
+
   });
 });
 
