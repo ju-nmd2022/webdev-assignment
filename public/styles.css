@@ -12,23 +12,20 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 200px; 
-  font-weight: normal; 
+  font-size: 200px;
+  font-weight: normal;
   margin: 0;
-  padding: 50px ; 
+  padding: 50px;
   padding-top: 5px;
   color: #914793;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  white-space: nowrap; 
-  overflow: hidden; 
-  max-width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
   cursor: pointer;
 }
-
-
-
 
 #stores-list {
   display: grid;
@@ -59,12 +56,7 @@ h1 {
   cursor: pointer;
 }
 
-#stores-list li:hover {
-  color: transparent;
-}
-
 #stores-list li::after {
-  content: "Visit Website";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,4 +69,13 @@ h1 {
 
 #stores-list li:hover::after {
   opacity: 1;
+}
+
+#stores-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#stores-list li a:hover {
+  color: inherit;
 }

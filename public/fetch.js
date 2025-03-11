@@ -1,17 +1,24 @@
-
 fetch("/api/stores")
-  .then((response) => response.json()) 
+  .then((response) => response.json())
   .then((data) => {
-    
     const storesList = document.getElementById("stores-list");
 
-    
     data.forEach((store) => {
       const listItem = document.createElement("li");
-      listItem.textContent = store.name; 
+
+      if (store.url) {
+        const link = document.createElement("a");
+        link.href = store.url.startsWith("http")
+          ? store.url
+          : `https://${store.url}`;
+        link.textContent = store.name;
+        link.target = "_blank"; // Open in new tab
+        listItem.appendChild(link);
+      } else {
+        listItem.textContent = store.name;
+      }
+
       storesList.appendChild(listItem);
     });
   })
-  .catch((error) => {
-    console.error("Error loading stores:", error);
-  });
+  .catch((error) => console.error("Error loading stores:", error));
