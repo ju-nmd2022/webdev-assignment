@@ -12,7 +12,7 @@ fetch("/api/stores")
           ? store.url
           : `https://${store.url}`;
         link.textContent = store.name;
-        link.target = "_blank"; // Open in new tab
+        link.target = "_blank";
         listItem.appendChild(link);
       } else {
         listItem.textContent = store.name;
